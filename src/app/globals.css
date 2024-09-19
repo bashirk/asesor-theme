@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .btn {
+        @apply px-6 py-3 rounded-full font-semibold text-base transition-all duration-300 ease-in-out;
+    }
+
+    .btn-primary {
+        @apply bg-blue-600 text-white hover:bg-blue-700;
+    }
+
+    .btn-text {
+        @apply text-black bg-transparent;
+    }
+
+    .logo-ticker-image {
+        @apply h-8 w-auto;
+    }
+
+    .tag {
+        @apply text-sm inline-flex border border-[#222]/10 px-3 py-1 rounded-lg tracking-tight;
+    }
+
+    .section-title {
+        @apply text-center text-3xl md:text-[54px] md:leading-[60px] font-bold tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text;
+    }
+
+    .section-description {
+        @apply text-center text-[22px] leading-[30px] tracking-tight text-[#010D3E];
+    }
+
+    .card {
+        @apply p-10 border border-[#222222]/10 rounded-3xl shadow-[0_7px_14px_#EAEAEA] max-w-xs w-full;
+    }
+
+    .btn-outline {
+        @apply border-2 border-white text-white hover:bg-white hover:text-black;
+    }
+
+    .cube {
+        width: 100px;
+        height: 100px;
+        background: linear-gradient(135deg, #4a90e2, #007aff);
+        transform: rotateY(45deg) rotateX(45deg);
+        position: relative;
+        margin: 0 auto;
+        animation: rotate 5s infinite linear;
+    }
+
+    .cube::before,
+    .cube::after {
+        content: '';
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: inherit;
+    }
+
+    .cube::before {
+        transform: rotateY(90deg);
+        left: 100px;
+    }
+
+    .cube::after {
+        transform: rotateX(90deg);
+        top: 100px;
+    }
+
+    .cylinder {
+        width: 60px;
+        height: 120px;
+        background: linear-gradient(135deg, #ff6f61, #ff3d00);
+        border-radius: 30px;
+        position: relative;
+        margin: 0 auto;
+        animation: rotate 5s infinite linear;
+    }
+
+    @keyframes rotate {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+}
